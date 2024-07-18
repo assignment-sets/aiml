@@ -32,3 +32,6 @@ print("Mean of the array:", mean_result)
 
 median_result = np.median(study_duration1)
 print("Median of the array:", median_result)
+
+reshaped_arr = study_duration1.reshape(3, 2) #2 is rows and 3 is cols
+print("Reshaped array:", reshaped_arr)
