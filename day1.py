@@ -35,3 +35,12 @@ print("Median of the array:", median_result)
 
 reshaped_arr = study_duration1.reshape(3, 2) #2 is rows and 3 is cols
 print("Reshaped array:", reshaped_arr)
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+file_path = r'C:\Users\User\Desktop\hello\\' #or just remove r and use forward slash
+np.savetxt(file_path + 'data.csv', arr, fmt="%d")
+np.savetxt(file_path + 'data.txt', arr, fmt="%d")
+print(f"NumPy array has been successfully written to {file_path}")
