@@ -66,3 +66,13 @@ df['Roll Num'] = [101, 102, 103]
 
 print("Student DataFrame:")
 print(df)
+
+num_rows = len(df)  
+print(f"Number of rows in the DataFrame: {num_rows}")
+
+row_count = 0
+
+for _ in df.iterrows():
+    row_count += 1
+
+print(f"Number of rows in the DataFrame: {row_count}")
