@@ -44,3 +44,25 @@ file_path = r'C:\Users\User\Desktop\hello\\' #or just remove r and use forward s
 np.savetxt(file_path + 'data.csv', arr, fmt="%d")
 np.savetxt(file_path + 'data.txt', arr, fmt="%d")
 print(f"NumPy array has been successfully written to {file_path}")
+
+import pandas as pd
+
+st_dataset = {
+    "key_1" : 1,
+    "key_2" : 2
+    }
+
+series = pd.Series(st_dataset)
+
+# print(series)
+
+student_data = {
+    'Name': ['John Doe', 'Jane Smith', 'David Johnson'],
+    'Email': ['john.doe@example.com', 'jane.smith@example.com', 'david.johnson@example.com']
+}
+
+df = pd.DataFrame(student_data)
+df['Roll Num'] = [101, 102, 103]
+
+print("Student DataFrame:")
+print(df)
