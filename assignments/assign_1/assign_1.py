@@ -85,3 +85,25 @@ print(checkerboard_matrix)
 #17
 arr = np.arange(4, 13, 1).reshape(3, 3)
 np.savetxt(r'C:\file.txt', arr, fmt='%d')
+
+#19
+arr = np.zeros(16, dtype=int).reshape(4, 4)
+vals = [4, 5, 6, 8]
+for i in range(4):
+    arr[i,i] = vals[i]
+    
+print(arr)
+
+#20
+arr = np.linspace(2.5, 6.5, 30)
+print(arr)
+
+#22
+array = np.array([[1, 5, 3],
+                  [7, 2, 8],
+                  [4, 6, 9]])
+
+max_values = np.max(array, axis=1)
+min_values = np.min(array, axis=1)
+difference = max_values - min_values
+print("Difference between max and min values:", difference)
