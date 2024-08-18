@@ -52,3 +52,60 @@ print(value)
 #10
 marksheet = marksheet[marksheet['Math'] >= 80]
 print(marksheet)
+
+#11
+new_row = pd.DataFrame({
+    'Student ID': [104],
+    'Name': ['David'],
+    'Math': [88],
+    'English': [91]
+})
+position = 1
+df_before = marksheet.iloc[:position, :]
+df_after = marksheet.iloc[position:, :]
+marksheet = pd.concat([df_before, new_row, df_after], ignore_index=True)
+print(marksheet)
+
+#12
+marksheet['Total'] = 0
+for index, row in marksheet.iterrows():
+    marksheet.at[index, 'Total'] = row['Math'] + row['English']
+
+print(marksheet)
+
+#13
+column_names = marksheet.columns
+
+print(column_names)
+
+#14
+marksheet = marksheet.rename(columns={'Student ID': 'ID', 'Math': 'Maths'})
+print(marksheet)
+
+#15
+df['Full Name'] = df['First Name'] + ' ' + df['Last Name']
+print(df)
+
+#16
+unique_names = marksheet['Name'].unique()
+print(unique_names)
+
+#18
+array = np.array([10, 20, 30, 40, 50])
+series = pd.Series(array)
+print(series)
+
+#19
+data = {'a': 10, 'b': 20, 'c': 30, 'd': 40, 'e': 50}
+series = pd.Series(data)
+print(series)
+
+#21
+series = pd.Series(np.arange(5))
+print(series)
+
+#22
+data = {'a': 10, 'b': 20, 'c': 30}
+series = pd.Series(data)
+print(series['a'])
+# o/p : 10
