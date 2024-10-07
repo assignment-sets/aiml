@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 # 1
 # a
 iris = load_iris()
-# print(iris['DESCR'])
+print(iris['DESCR'])
 
 # b
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
